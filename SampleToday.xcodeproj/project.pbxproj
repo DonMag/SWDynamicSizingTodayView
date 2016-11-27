@@ -17,9 +17,6 @@
 		F68653181DE8B3400008EC24 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68653161DE8B3400008EC24 /* MainInterface.storyboard */; };
 		F686531C1DE8B3400008EC24 /* STWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F686530F1DE8B3400008EC24 /* STWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F68653221DE8B7DF0008EC24 /* TodayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68653211DE8B7DF0008EC24 /* TodayTableViewCell.swift */; };
-		F68653241DE8DB7F0008EC24 /* topButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68653231DE8DB7F0008EC24 /* topButtonsView.swift */; };
-		F68653261DE8DB8C0008EC24 /* bottomButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68653251DE8DB8C0008EC24 /* bottomButtonsView.swift */; };
-		F68653281DE8DB9C0008EC24 /* heightControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68653271DE8DB9C0008EC24 /* heightControlView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,9 +57,6 @@
 		F68653171DE8B3400008EC24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		F68653191DE8B3400008EC24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F68653211DE8B7DF0008EC24 /* TodayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayTableViewCell.swift; sourceTree = "<group>"; };
-		F68653231DE8DB7F0008EC24 /* topButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = topButtonsView.swift; sourceTree = "<group>"; };
-		F68653251DE8DB8C0008EC24 /* bottomButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bottomButtonsView.swift; sourceTree = "<group>"; };
-		F68653271DE8DB9C0008EC24 /* heightControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = heightControlView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,9 +125,6 @@
 				F68653161DE8B3400008EC24 /* MainInterface.storyboard */,
 				F68653191DE8B3400008EC24 /* Info.plist */,
 				F68653211DE8B7DF0008EC24 /* TodayTableViewCell.swift */,
-				F68653231DE8DB7F0008EC24 /* topButtonsView.swift */,
-				F68653251DE8DB8C0008EC24 /* bottomButtonsView.swift */,
-				F68653271DE8DB9C0008EC24 /* heightControlView.swift */,
 			);
 			path = STWidget;
 			sourceTree = "<group>";
@@ -249,11 +240,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F68653241DE8DB7F0008EC24 /* topButtonsView.swift in Sources */,
-				F68653261DE8DB8C0008EC24 /* bottomButtonsView.swift in Sources */,
 				F68653151DE8B3400008EC24 /* TodayViewController.swift in Sources */,
 				F68653221DE8B7DF0008EC24 /* TodayTableViewCell.swift in Sources */,
-				F68653281DE8DB9C0008EC24 /* heightControlView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

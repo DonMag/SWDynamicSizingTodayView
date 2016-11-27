@@ -11,14 +11,11 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDelegate, UITableViewDataSource {
         
+	@IBOutlet weak var noRowsLabel: UILabel!
+	
 	@IBOutlet weak var theTableView: UITableView!
 	
-	@IBOutlet weak var topButtonsView: UIView!
-	@IBOutlet weak var bottomButtonsView: UIView!
-	
 	@IBOutlet weak var heightControlConstraint: NSLayoutConstraint!
-	
-	@IBOutlet weak var bottomButtonsViewTopConstraint: NSLayoutConstraint!
 	
 	var numSections: Int = 1
 	var numRows: Int = 4
@@ -45,8 +42,8 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDeleg
 		theTableView.tableHeaderView = v
 		theTableView.tableFooterView = v
 		
-		theTableView.backgroundColor = UIColor.redColor()
-		
+		theTableView.backgroundColor = UIColor(red: 0.5, green: 0.75, blue: 1.0, alpha: 1.0)
+	
 		self.updateTableSize()
 		
 	}
@@ -55,7 +52,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDeleg
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+	
     func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)) {
         completionHandler(NCUpdateResult.NewData)
     }
@@ -76,32 +73,19 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDeleg
 		theTableView.reloadData()
 		self.updateTableSize()
 	}
-
+	
 	// MARK: - widget sizing
 	
 	func updateTableSize() -> Void {
 		
-		// total height =
-		//		top of tableView +
-		//		number of rows * row height +
-		//		height of bottom buttons container view
-		//
-		// Note: if no events, add one rowHeight to leave space for the "No Events" label
+		// Note: if no rows, add one rowHeight to leave space
 		
-		let vTop: CGFloat = theTableView.frame.origin.y
-		let nRows: Int = max(numRows, 1)
-		let vRows: CGFloat = CGFloat(nRows) * myRowHeightConstant
-		let vBtns: CGFloat = bottomButtonsView.frame.size.height
-		
-		var ttlHeight: CGFloat = vTop + vRows + vBtns
+		let vHeight: CGFloat = CGFloat(max(self.numRows, 1)) * self.myRowHeightConstant
+			
+		self.heightControlConstraint.constant = vHeight
 
-		heightControlConstraint.constant = ttlHeight
+		self.noRowsLabel.hidden = (self.numRows > 0)
 		
-		ttlHeight = vTop + vRows
-		
-//		bottomButtonsViewTopConstraint.constant = ttlHeight
-		
-		print("ttlHeight: \(ttlHeight)")
 	}
 	
 
